@@ -1,0 +1,71 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    background-color: #ffffff;
+    padding: 20px;
+}
+
+.container {
+    display: grid;
+    /* Dos columnas principales: izquierda (C) y derecha (E, F, G) */
+    grid-template-columns: 2fr 2fr;
+    grid-template-rows: auto auto;
+    
+    grid-template-areas: 
+        "a b"
+        "c right";
+
+    gap: 15px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.a {
+    grid-area: a;
+    background-color: #788691;
+}
+
+.b {
+    grid-area: b;
+    background-color: #788691;
+}
+
+.c {
+    grid-area: c;
+    background-color: #788691;
+}
+
+/* Contenedor que agrupa E, F y G a la derecha */
+.right-column {
+    grid-area: right;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Subfila para que F y G estén uno al lado del otro debajo de E */
+.sub-row {
+    display: flex;
+    gap: 15px;
+}
+
+.box {
+    padding: 30px;
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+}
+
+/* Colores específicos para diferenciar las cajas */
+.e, .f, .g {
+    background-color: #bcd5ee;
+    color: #333;
+}
+
+/* Hacemos que F y G ocupen el mismo ancho en su fila */
+.sub-row .box {
+    flex: 1;
+}

@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+
+    text-decoration: none;
+    list-style: none;
+
+    
+}
+h1 {
+    text-align: center;
+}
+
+.text-normal {
+    color: blue;
+}
+
+#text-titol{
+    color: brown;
+}
+
+.text-paragraf{
+
+    color: green;
+}
